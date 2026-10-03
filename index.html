@@ -86,6 +86,36 @@ section.reveal:after{transform:scaleX(1)}
 .reveal{opacity:0;transform:translateY(60px) scale(.985);filter:blur(5px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1),filter 1s}.reveal.show{opacity:1;transform:none;filter:none}
 .scrollbar{position:fixed;z-index:120;top:0;left:0;width:0;height:2px;background:var(--m);box-shadow:0 0 14px #b44a5d;pointer-events:none}
 @media(max-width:800px){body{cursor:auto}.hero:before{opacity:.18}.hero h1 .outline{margin-left:0}.visual:hover{transform:none}.house:hover{transform:translateY(-5px)}.crest-box:before{display:none}}
+
+/* MOBILE TYPE SAFETY */
+*,*::before,*::after{min-width:0}
+h1,h2,h3,p,.lead,.motto,.stamp,.micro,.tag,.house strong,.life-card h3,.end h2{max-width:100%;overflow-wrap:break-word;word-break:normal}
+@media(max-width:800px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  .hero-inner{width:auto;margin:0 18px;padding-left:0;padding-right:0}
+  .hero h1{font-size:clamp(54px,18vw,105px);line-height:.82;letter-spacing:-.075em;max-width:100%;overflow:visible}
+  .hero h1 span{max-width:100%;white-space:normal}
+  .hero h1 .outline{margin-left:0;-webkit-text-stroke:.7px #fff;filter:drop-shadow(0 10px 18px #000b)}
+  .hero h1 .maroon{font-size:.96em}
+  .head h2{font-size:clamp(48px,14vw,82px);line-height:.84;letter-spacing:-.065em;text-wrap:balance}
+  .statement .lead{font-size:clamp(36px,10.5vw,64px);line-height:.92;text-wrap:balance}
+  .now-copy h3{font-size:clamp(44px,14vw,78px);line-height:.84;text-wrap:balance}
+  .life-card h3{font-size:clamp(38px,12vw,62px);text-wrap:balance}
+  .end h2{font-size:clamp(58px,17vw,110px);line-height:.78;white-space:normal;text-wrap:balance}
+  .motto{font-size:clamp(24px,7vw,38px)}
+  .stamp{font-size:8px;line-height:1.5}
+  .meaning{grid-template-columns:1fr}
+  .meaning article{min-height:120px}
+  .house strong{font-size:clamp(28px,8vw,46px)}
+  .ticker-track{white-space:nowrap;max-width:none}
+}
+@media(max-width:390px){
+  .hero h1{font-size:17vw}
+  .hero-inner{margin:0 15px}
+  section{padding-left:15px;padding-right:15px}
+  .hero-bottom{max-width:100%}
+  .head h2{font-size:13vw}
+}
 </style>
 </head>
 <body>
